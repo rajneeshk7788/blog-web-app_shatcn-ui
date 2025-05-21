@@ -9,7 +9,7 @@ import {
   SheetTitle,
   SheetTrigger,
 } from "@/components/ui/sheet"
-import {ModeToggle} from "@/components/ThemeButton"
+import { ModeToggle } from "@/components/ThemeButton"
 
 
 
@@ -23,27 +23,29 @@ const Navbar = () => {
           {/* Logo and brand name */}
           <div className="flex items-center">
             <Link href="/" className="flex-shrink-0 flex items-center">
-              <span className="text-xl font-bold text-gray-800">Your Logo</span>
+              <span className="text-xl font-bold">Your Logo</span>
             </Link>
           </div>
 
           {/* Desktop Navigation */}
           <div className="hidden md:flex items-center space-x-4">
-            <Link href="/" className="text-gray-600 hover:text-gray-900 px-3 py-2 rounded-md text-sm font-medium">
+            <Link href="/" className=" px-3 py-2 rounded-md text-sm font-medium">
               Home
             </Link>
-            <Link href="/about" className="text-gray-600 hover:text-gray-900 px-3 py-2 rounded-md text-sm font-medium">
+            <Link href="/components/About" className=" px-3 py-2 rounded-md text-sm font-medium">
               About
             </Link>
-            <Link href="/services" className="text-gray-600 hover:text-gray-900 px-3 py-2 rounded-md text-sm font-medium">
-              Services
-            </Link>
-            <Link href="/contact" className="text-gray-600 hover:text-gray-900 px-3 py-2 rounded-md text-sm font-medium">
+
+            <Link href="/components/Contact" className=" px-3 py-2 rounded-md text-sm font-medium">
               Contact
             </Link>
-            <Button variant="outline">LogIn</Button>
-            <Button variant="outline">Signup</Button>
-            <ModeToggle/>
+            <Button asChild>
+              <Link href="/components/Login">Login</Link>
+            </Button>
+            <Button asChild>
+              <Link href="/components/Signup">Signup</Link>
+            </Button>
+            <ModeToggle />
           </div>
 
           {/* Mobile menu button */}
@@ -70,33 +72,33 @@ const Navbar = () => {
               </SheetTrigger>
               <SheetContent side="right" aria-describedby={undefined} className="w-60">
                 <SheetHeader>
-                  <SheetTitle>Navigation Menu   <ModeToggle/></SheetTitle>
+                  <SheetTitle>Navigation Menu   <ModeToggle /></SheetTitle>
                 </SheetHeader>
                 <div className="flex flex-col px-2 pt-2 pb-3 space-y-1 sm:px-3">
                   <Link
                     href="/"
-                    className="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:text-gray-900 hover:bg-gray-50"
+                    className="block px-3 py-2 rounded-md text-base font-medium "
                   >
                     Home
                   </Link>
                   <Link
                     href="/about"
-                    className="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:text-gray-900 hover:bg-gray-50"
-                    
+                    className="block px-3 py-2 rounded-md text-base font-medium "
+
                   >
                     About
                   </Link>
                   <Link
                     href="/services"
-                    className="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:text-gray-900 hover:bg-gray-50"
-                    
+                    className="block px-3 py-2 rounded-md text-base font-medium "
+
                   >
-                    Services    
+                    Services
                   </Link>
                   <Link
                     href="/contact"
-                    className="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:text-gray-900 hover:bg-gray-50"
-                    
+                    className="block px-3 py-2 rounded-md text-base font-medium "
+
                   >
                     Contact
                   </Link>
